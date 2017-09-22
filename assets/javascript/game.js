@@ -3,7 +3,7 @@
 //  ** SOLUTION **
 
  var audio = new Audio("assets/audio/alarm.m4a");
- audio.play();
+
 
  // function timeUp() {
  //  setTimeout(function() 
@@ -36,6 +36,7 @@ function nextImage() {
 
   // TODO: Use a setTimeout to run displayImage after 1 second.
   setTimeout(displayImage, 1000);
+  audio.play();
 
   // TODO: If the count is the same as the length of the image array, reset the count to 0.
   if (count === images.length) {
