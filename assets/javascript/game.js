@@ -2,24 +2,27 @@
 //  Slideshow Activity
 //  ** SOLUTION **
 
-// TODO: Put links to our images in this image array.
-var images = ["images/bootstrap.png", "images/github-logo.jpg", "images/logo_JavaScript.png"];
+ var audio = new Audio("assets/audio/alarm.m4a");
+ audio.play();
 
-// Variable showImage will hold the setInterval when we start the slideshow
+ // function timeUp() {
+ //  setTimeout(function() 
+ //  {
+ //  $("#time-left").html("<h2>Time is up!</h2>")
+ //  // console log 10 seconds left
+ //  audio.play();
+ //  }, 1000);
+
+ //  timeup();
 var showImage;
-
-// Count will keep track of the index of the currently displaying picture.
 var count = 0;
-
-// TODO: Use jQuery to run "startSlideshow" when we click the "start" button.
 $("#start").click(startSlideshow);
-
-// TODO: Use jQuery to run "stopSlideshow" when we click the "stop" button.
 $("#stop").click(stopSlideshow);
 
+var images = ["assets/images/img1.jpg", "assets/images/img2.jpg", "assets/images/img3.jpg", "assets/images/img4.jpg",
+"assets/images/img5.jpg", "assets/images/img6.jpg","assets/images/img7.jpg","assets/images/img8.jpg","assets/images/img9.jpg",
+"assets/images/img10.jpg","assets/images/img11.jpg","assets/images/img12.jpg","assets/images/img13.jpg"];
 
-// This function will replace display whatever image it's given
-// in the 'src' attribute of the img tag.
 function displayImage() {
   $("#image-holder").html("<img src=" + images[count] + " width='400px'>");
 }
@@ -29,7 +32,7 @@ function nextImage() {
   count++;
 
   // TODO: Show the loading gif in the "image-holder" div.
-  // $("#image-holder").html("<img src='images/loading.gif' width='200px'/>");
+  //$("#image-holder").html("<img src='assets/images/heart.mp4' width='200px'/>");
 
   // TODO: Use a setTimeout to run displayImage after 1 second.
   setTimeout(displayImage, 1000);
@@ -54,5 +57,4 @@ function stopSlideshow() {
 
 }
 
-// This will run the display image function as soon as the page loads.
 displayImage();
